@@ -1,4 +1,4 @@
-# Ruby Objective-C + Swift Extension example
+# Ruby Objective-C + Swift extension example
 
 ```
 $ rake compile
