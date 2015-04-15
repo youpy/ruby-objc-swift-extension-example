@@ -1,0 +1,9 @@
+hello.o: hello.m hello_class.h
+	$(ECHO) compiling $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+
+.swift.o:
+	swiftc -c -emit-objc-header -import-objc-header $(srcdir)/imported.h $(INCFLAGS) $(CPPFLAGS) $<
+	swiftc -c -import-objc-header $(srcdir)/imported.h -o $@ $(INCFLAGS) $(CPPFLAGS) $<
+
+hello_class.h: hello_class.o
