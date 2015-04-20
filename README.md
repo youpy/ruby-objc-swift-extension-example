@@ -2,5 +2,5 @@
 
 ```
 $ rake compile
-$ ruby -Ilib -rhello -e "puts Hello::World.new.greeting"
+$ ruby -Ilib -rhello -e "puts Hello::World.new.greeting('world')"
 ```
